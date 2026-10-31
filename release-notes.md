@@ -1,32 +1,32 @@
-# Flow v3.0.0
+# Aello v3.0.0
 
 **Release date:** 2026-10-18
 **Status:** Stable
 
-Enjoying Flow? Consider supporting its development on [Open Collective](https://opencollective.com/flow-tube) or [Patreon](https://patreon.com/A_EDev) to help keep the app free, open source, ad-free, and improving!
+Enjoying Aello? Star the project on GitHub to help keep the app free, open source, ad-free, and improving!
 
 ## Highlights
 
 - The whole app is redesigned on Material 3 Expressive, with real tablet and foldable layouts
-- Flow now runs on its own native InnerTube client everywhere, NewPipe's extractor is gone
+- Aello now runs on its own native InnerTube client everywhere, NewPipe's extractor is gone
 - New on-device music taste engine: Quick Picks, Daily Mixes, endless radio and new shelves
 - Home recommendations rebuilt to learn from what you actually watch (#907)
-- Flow Recap: private monthly and yearly stats, plus a Recap story you can share
+- Aello Recap: private monthly and yearly stats, plus a Recap story you can share
 - New Equalizer page with AutoEQ and EqualizerAPO presets
 - Word by word lyrics, a rebuilt music player and a new queue
 - Big upgrades to Downloads, Local media and subtitles
-- In-app updates, private notes, and themes shared with Flow Desktop
+- In-app updates, private notes, and themes shared with Aello Desktop
 
 ## Behavior changes
 
 - Background Play is now on by default, you can turn it off in Playback settings (#1298)
 - Backups now carry your settings and library only. The recommendation engine and sync identity stay on the device, so a reinstall starts the engine clean (#907)
-- The Flow Control Center is now called Your taste
+- The Aello Control Center is now called Your taste
 - Explore's Movies tab is gone because YouTube stopped serving its chart (#1254)
 
 ## Native innertube client
 
-- Search, channels, Explore, Shorts, comments, descriptions and the player all run on Flow's own InnerTube client
+- Search, channels, Explore, Shorts, comments, descriptions and the player all run on Aello's own InnerTube client
 - Video search makes one request per page instead of thirteen, with filters and sorting done by the server
 - The player resolves videos through one client instead of racing two, and fetches the watch page once per video
 - Channel pages handle scheduled streams and premieres correctly
@@ -75,7 +75,7 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 
 ## Your taste
 
-- The Flow Control Center is now Your taste: video and music taste, engine details, and a Hidden from you page
+- The Aello Control Center is now Your taste: video and music taste, engine details, and a Hidden from you page
 - Your picks are listed apart from what was learned, each with how much you watch it (#907)
 - Discover and subscribe to channels here, next to channels you watch without subscribing (#804)
 - Remove a remembered channel or clear channel memory (#907)
@@ -112,7 +112,7 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 - The mini player sits on its own at the bottom, moves with the navigation bar and closes with a swipe down
 - On tablets the mini player is a centred card that doesn't cover the navigation rail
 - New songs start in the mini player unless you turn on the full player in Playback settings
-- Music comes back after Flow was closed: the system media controls and a headset's Play button resume your queue where it stopped, mid song (#1280)
+- Music comes back after Aello was closed: the system media controls and a headset's Play button resume your queue where it stopped, mid song (#1280)
 - Optional sleep timer button next to the queue button, turned on in Player Appearance
 - Palette Gradient, Blur and Blur Gradient can turn light with a light app theme, mini player included, with Light in light theme in Player Appearance
 
@@ -170,7 +170,7 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 ## Video queue and mini player
 
 - Redesigned queue: swipe away with Undo, long press menu, shuffle and repeat toggles, and time left
-- Sharing a video to Flow while something plays lets you choose Play now, Play next, Add to queue, Save or Download instead of losing your queue. Content, Links, Shared links sets when Flow asks (#1116)
+- Sharing a video to Aello while something plays lets you choose Play now, Play next, Add to queue, Save or Download instead of losing your queue. Content, Links, Shared links sets when Aello asks (#1116)
 - On tablets the queue opens in the side pane, and in fullscreen from its own button
 - A video playing in the background keeps a mini bar with play, pause and its queue (#980)
 - Swipe the mini bar up to grow it into the player under your finger (#980)
@@ -197,7 +197,7 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 ## Library, playlists and notes
 
 - Likes are now two playlists, Liked videos and Liked music, with search, sort, select, Play all, Shuffle, Download all and Save as file
-- Rebuilt playlist page with a big artwork header, side by side on tablets like Flow Desktop
+- Rebuilt playlist page with a big artwork header, side by side on tablets like Aello Desktop
 - YouTube playlists open on the first page right away, remember their sort order, and removals can be undone
 - Search inside any playlist
 - Save a playlist as a file, share it, and import it from the Playlists screen or by opening the file
@@ -208,9 +208,9 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 
 ## Downloads
 
-- Downloads are M4A or MP4 with readable names, cover art, details and lyrics inside the file, so other players can use them and Flow restores them after a reinstall. Songs get their own quality setting (#866, #894, #764)
+- Downloads are M4A or MP4 with readable names, cover art, details and lyrics inside the file, so other players can use them and Aello restores them after a reinstall. Songs get their own quality setting (#866, #894, #764)
 - Download a whole album or playlist as one item in its own folder, playable offline (#913)
-- Downloads keep running after Flow is closed and resume where they stopped
+- Downloads keep running after Aello is closed and resume where they stopped
 - Downloads shows used and free space, has search, sort and select, and lists quality, size and date for each item
 - Optional: download videos you open, on Wi-Fi or any network (#771)
 - Save a subtitle file beside downloaded videos (#1182)
@@ -238,13 +238,13 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 ## Settings and appearance
 
 - Settings rebuilt with grouped rows, search for any option, and two panes on tablets
-- Themes match Flow Desktop, Monochrome has a true black AMOLED style, and named custom themes can move between both apps
+- Themes match Aello Desktop, Monochrome has a true black AMOLED style, and named custom themes can move between both apps
 - Custom colours can be translucent again with an Opacity slider
 - Choose the app font: System, Condensed, Serif or your own .ttf or .otf (#1222)
 - Thumbnail quality can be set for Wi-Fi and mobile data separately, or thumbnails turned off (#886, #849)
 - Cache settings show space per type with separate limits and Clear buttons (#1229)
 - New switches: Subscriptions on Home, watch progress on thumbnails, Pause watch history (#1086)
-- A Content setting shows if YouTube links open in Flow and takes you to the system screen to turn it on (#802)
+- A Content setting shows if YouTube links open in Aello and takes you to the system screen to turn it on (#802)
 - The proxy can step aside while a VPN is on (#677)
 - The app language list shows every translated language, Traditional Chinese (Taiwan) included, and matches Android's App languages setting (#1300)
 - Original titles, in Language and region, keeps titles and descriptions in the video's own language instead of YouTube's automatic translation, on cards, Shorts and the watch page (#1230)
@@ -266,19 +266,19 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 - Notifications have grouped rows, swipe to remove with Undo, and Clear all asks first
 - The crash page shows a plain summary, and Report fills the whole GitHub bug form (#1189)
 - The donation prompt has Don't show again and never shows on the same launch as an update
-- Flow can now be supported on Open Collective, alongside Patreon and crypto
+- Aello can now be supported on Open Collective, alongside Patreon and crypto
 
 ## Recap and privacy
 
-- Flow Recap: a private record of your watching and listening, with charts for any month, year or all time
+- Aello Recap: a private record of your watching and listening, with charts for any month, year or all time
 - A monthly and yearly Recap story, shareable as a poster
 - Digital wellbeing reads watch time from Recap once it covers a full week
-- Deep Flow keeps a session private: nothing goes to Recap, feed memory or scrobbling. Long press the FLOW wordmark or logo to switch it (#1228)
-- An optional Deep Flow switch above recent searches, turned on in Settings (#706)
+- Deep Aello keeps a session private: nothing goes to Recap, feed memory or scrobbling. Long press the AELLO wordmark or logo to switch it (#1228)
+- An optional Deep Aello switch above recent searches, turned on in Settings (#706)
 
 ## Imports, sync and updates
 
-- Updates download, verify and install inside Flow, with release notes, size and Skip this version
+- Updates download, verify and install inside Aello, with release notes, size and Skip this version
 - Google Takeout imports a whole split export at once: subscriptions, playlists, likes, searches, watch history and your YouTube Music library (#858, #1027)
 - Takeout works in any account language (#1128)
 - Importing the same export twice no longer duplicates playlists, and they keep YouTube's creation date (#858)
@@ -289,14 +289,14 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 - One shared music engine serves every music page. Daily Mixes open in about a second instead of up to 30, with much less battery drain and heat
 - Animations pause when their screen isn't visible, ending a constant drain while listening
 - Music shelves only update while the Music screen is open, and similar songs are fetched once per track
-- Flow opens as soon as the first screen is ready instead of waiting on a two second splash, and on Android 13+ the splash matches your theme and icon
+- Aello opens as soon as the first screen is ready instead of waiting on a two second splash, and on Android 13+ the splash matches your theme and icon
 - Playlists are fetched once instead of twice, Local media doesn't rescan on every visit, and download progress updates once a second
 - The expanded music player isn't rebuilt on every song, and lyrics stop updating while paused
 - Feed ranking is lighter, and less is written to disk while scrolling
 - The bot check runs once per video instead of three times
 - Opening and collapsing the player is smoother, with no jumps after slow frames and no bounce
 - Live streams use far less data, about 20 KB/s instead of 116 KB/s at 144p in testing, and live chat pauses in the background (#1042)
-- Flow no longer warms up playback when it only wakes in the background for a check, a widget or the media controls (#1272)
+- Aello no longer warms up playback when it only wakes in the background for a check, a widget or the media controls (#1272)
 - Home, Subscriptions, Library and the player share reusable parts, and the feed pipeline was rebuilt to fix stalls
 
 ## Fixes: playback
@@ -323,7 +323,7 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 - Fix the ambient glow, and a crash on some ROMs from oversized artwork
 - Fix crashes from a cancelled back swipe (#1307) and from media buttons with nothing to play (#1309)
 - Fix the next video in a queue staying hidden behind its thumbnail while it plays (#1313)
-- Fix a paused video staying in the notification after clearing Flow from recents, and the sleep timer's Close app leaving the players running (#1272)
+- Fix a paused video staying in the notification after clearing Aello from recents, and the sleep timer's Close app leaving the players running (#1272)
 
 ## Fixes: player and gestures
 
@@ -377,7 +377,7 @@ Enjoying Flow? Consider supporting its development on [Open Collective](https://
 - Fix likes disappearing when a title had a "|", and unliking needing two taps
 - Fix music search showing suggestions when they're turned off
 - Fix music started during a background video getting no mini player
-- Fix music stopping when Flow was cleared from recents while a song loaded (#1280)
+- Fix music stopping when Aello was cleared from recents while a song loaded (#1280)
 - Fix artist bios stopping at "From Wikipedia (", they show in full with their source and licence links, and song rows on artist pages are visible again
 - Fix the sleep timer's Start and Cancel buttons sitting below the fold, the sheet now fits its content
 

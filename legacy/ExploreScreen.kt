@@ -1,4 +1,4 @@
-package io.github.aedev.flow.ui.screens.explore
+package io.github.niczzxo.aello.ui.screens.explore
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -20,12 +20,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
-import io.github.aedev.flow.data.model.Video
-import io.github.aedev.flow.ui.components.VideoCard
-import io.github.aedev.flow.ui.components.ShimmerVideoCard
-import io.github.aedev.flow.ui.theme.extendedColors
-import io.github.aedev.flow.utils.formatDuration
-import io.github.aedev.flow.utils.formatViewCount
+import io.github.niczzxo.aello.data.model.Video
+import io.github.niczzxo.aello.ui.components.VideoCard
+import io.github.niczzxo.aello.ui.components.ShimmerVideoCard
+import io.github.niczzxo.aello.ui.theme.extendedColors
+import io.github.niczzxo.aello.utils.formatDuration
+import io.github.niczzxo.aello.utils.formatViewCount
 
 @Composable
 fun ExploreScreen(

@@ -15,6 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Flow"
+rootProject.name = "Aello"
 include(":app")
 include(":benchmark")

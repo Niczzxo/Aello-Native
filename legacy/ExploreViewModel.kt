@@ -1,9 +1,9 @@
-package io.github.aedev.flow.ui.screens.explore
+package io.github.niczzxo.aello.ui.screens.explore
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import io.github.aedev.flow.data.model.Video
-import io.github.aedev.flow.data.repository.YouTubeRepository
+import io.github.niczzxo.aello.data.model.Video
+import io.github.niczzxo.aello.data.repository.YouTubeRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
