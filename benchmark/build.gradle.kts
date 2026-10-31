@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "io.github.aedev.flow.benchmark"
+    namespace = "io.github.niczzxo.aello.benchmark"
     compileSdk = 37
 
     compileOptions {

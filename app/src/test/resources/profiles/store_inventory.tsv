@@ -85,12 +85,12 @@ files_dir	offline_subtitles/	main:data/video/OfflineSubtitleStore.kt	DEVICE	-	Su
 files_dir	downloads/	main:data/video/VideoDownloadManager.kt	DEVICE	-	Internal downloads, and the staging fallback when external storage is missing.
 files_dir	download_covers/	main:data/video/storage/DownloadCovers.kt	DEVICE	-	Covers of downloads.
 files_dir	fonts/	main:data/local/CustomFontStore.kt	DEVICE	-	Imported font files; which one is used lives in app_font.
-files_dir	filesDir	main:data/backup/FlowBackupAgent.kt	DEVICE	-	Root for the restore cleanup; profile folders join it in Phase 1.
+files_dir	filesDir	main:data/backup/AelloBackupAgent.kt	DEVICE	-	Root for the restore cleanup; profile folders join it in Phase 1.
 files_dir	local_embedded_tags.json	main:data/localmedia/LocalEmbeddedTags.kt	DEVICE	-	Tags read from local files.
 files_dir	local_subtitles.json	main:data/localmedia/LocalSubtitleStore.kt	DEVICE	-	Subtitle choices for local media.
 files_dir	fake_stream_wall, fake_stream_wall_all	main:player/datasource/FakeStreamWallDataSource.kt	DEVICE	-	Debug switch files.
 no_backup_dir	headphone_resume_off	main:service/HeadphoneResume.kt	DEVICE	-	Player control; written during a switch so no headset resumes.
-cache_dir	innertube_http_cache/	main:FlowApplication.kt	CACHE	-	Deleted at switch: suggestion and sw.js_data GETs might be stored.
+cache_dir	innertube_http_cache/	main:AelloApplication.kt	CACHE	-	Deleted at switch: suggestion and sw.js_data GETs might be stored.
 cache_dir	recap/	main:ui/screens/recap/story/RecapShare.kt	CACHE	-	Share images from the active profile; deleted at switch.
 cache_dir	image_cache/	main:di/AppModule.kt	CACHE	-	Thumbnails; shared.
 cache_dir	http_cache/	main:di/NetworkModule.kt	CACHE	-	App OkHttp GET cache; shared.
@@ -105,11 +105,11 @@ cache_dir	exoplayer/, exoplayer_music/	main:player/cache/SharedPlayerCacheProvid
 cache_dir	updates/	github:updater/UpdateDownloadWorker.kt	DEVICE	-	Downloaded APKs.
 sqlite_file	newpipe_history_*.db, metrolist_import_*.db, newpipe_playlists_*.db	main:data/local/BackupRepository.kt	CACHE	-	Opens the temporary import copies.
 external_files_dir	downloads/ (Media3 download cache)	main:di/DownloadModule.kt	DEVICE	-	Legacy song downloads.
-external_files_dir	Music/Flow, Movies/Flow	main:data/video/DownloadRecoveryScanner.kt	DEVICE	-	Recovery scan of download folders.
-external_files_dir	staging/, Music/Flow, Movies/Flow	main:data/video/VideoDownloadManager.kt	DEVICE	-	Download staging and finished downloads.
-public_dir	Download/Flow	main:ui/screens/settings/downloads/DownloadSettingsViewModel.kt	DEVICE	-	Shows the public download folder.
-public_dir	Download/Flow, Movies/Flow, Music/Flow	main:data/video/DownloadRecoveryScanner.kt	DEVICE	-	Recovery scan of download folders.
-public_dir	Download/Flow, Movies/Flow, Music/Flow	main:data/video/VideoDownloadManager.kt	DEVICE	-	Finished downloads.
+external_files_dir	Music/Aello, Movies/Aello	main:data/video/DownloadRecoveryScanner.kt	DEVICE	-	Recovery scan of download folders.
+external_files_dir	staging/, Music/Aello, Movies/Aello	main:data/video/VideoDownloadManager.kt	DEVICE	-	Download staging and finished downloads.
+public_dir	Download/Aello	main:ui/screens/settings/downloads/DownloadSettingsViewModel.kt	DEVICE	-	Shows the public download folder.
+public_dir	Download/Aello, Movies/Aello, Music/Aello	main:data/video/DownloadRecoveryScanner.kt	DEVICE	-	Recovery scan of download folders.
+public_dir	Download/Aello, Movies/Aello, Music/Aello	main:data/video/VideoDownloadManager.kt	DEVICE	-	Finished downloads.
 webview	app_webview/	main:utils/potoken/PoTokenWebView.kt	PROFILE	identity	Attestation session; suffixed per profile on API 28+, cleared at switch on 26-27.
 webview	app_webview/	main:utils/cipher/CipherWebView.kt	PROFILE	identity	Shares the WebView data folder; suffixed per profile on API 28+.
 webview	app_webview/	github:discord/DiscordLoginActivity.kt	PROFILE	identity	Discord login cookies; suffixed per profile on API 28+.
@@ -121,11 +121,11 @@ files_dir	datastore/<name>.preferences_pb	main:data/profile/ProfileFiles.kt	DEVI
 files_dir	profile_settings/<id>/	main:data/profile/ProfileFiles.kt	PROFILE	settings	Another profile's settings stores.
 files_dir	profile_library/<id>/	main:data/profile/ProfileFiles.kt	PROFILE	library	Another profile's library stores.
 no_backup_dir	profiles/<id>/	main:data/profile/ProfileFiles.kt	PROFILE	private	Another profile's private stores, and an unread copy of any Default-only store it touches.
-profile_file	flow_neuro_brain_v10.json	main:data/recommendation/NeuroStorage.kt	PROFILE	private	The video brain.
-profile_file	flow_neuro_content_v1.json	main:data/recommendation/NeuroContentStore.kt	PROFILE	private	Content vectors learned from the profile.
-profile_file	flow_neuro_categories_v1.json	main:data/recommendation/NeuroCategoryStore.kt	PROFILE	private	Engine state.
-profile_file	flow_neuro_cowatch_v1.json	main:data/recommendation/NeuroCoWatchStore.kt	PROFILE	private	Co-watch graph from the profile's sessions.
-profile_file	flow_neuro_neighbours_v1.json	main:data/recommendation/NeuroNeighbourStore.kt	PROFILE	private	Engine state.
+profile_file	aello_neuro_brain_v10.json	main:data/recommendation/NeuroStorage.kt	PROFILE	private	The video brain.
+profile_file	aello_neuro_content_v1.json	main:data/recommendation/NeuroContentStore.kt	PROFILE	private	Content vectors learned from the profile.
+profile_file	aello_neuro_categories_v1.json	main:data/recommendation/NeuroCategoryStore.kt	PROFILE	private	Engine state.
+profile_file	aello_neuro_cowatch_v1.json	main:data/recommendation/NeuroCoWatchStore.kt	PROFILE	private	Co-watch graph from the profile's sessions.
+profile_file	aello_neuro_neighbours_v1.json	main:data/recommendation/NeuroNeighbourStore.kt	PROFILE	private	Engine state.
 profile_file	flow_blocked_channel_names_v1.json	main:data/recommendation/BlockedChannelNameStore.kt	PROFILE	private	Names for the profile's blocked channels.
 profile_file	flow_music_brain_v1.json	main:data/recommendation/music/MusicBrainStorage.kt	PROFILE	private	The music brain.
 profile_file	neuro_brain_before_v<N>.json	main:data/recommendation/NeuroStorage.kt	PROFILE	private	Brain copy before a migration; the delete is prefix-wide, so it needs the profile's own folder.
@@ -133,7 +133,7 @@ profile_file	neuro/home_snapshots/	main:data/recommendation/snapshot/HomeSnapsho
 profile_file	discord_tokens.enc	github:discord/DiscordTokenStore.kt	PROFILE	private	Personal OAuth tokens; the Keystore alias stays shared.
 profile_file	music_queue	main:data/local/QueuePersistence.kt	PROFILE	private	Checks for a saved queue before the store can be read.
 profile_file	user_neuro_brain.json	main:data/recommendation/NeuroStorage.kt	DEFAULT_ONLY	-	Pre-DataStore brain, migrated for Default only.
-profile_file	flow_neuro_brain_v7.json, v8, v9	main:data/recommendation/NeuroStorage.kt	DEFAULT_ONLY	-	Legacy brains, migrated for Default only.
+profile_file	aello_neuro_brain_v7.json, v8, v9	main:data/recommendation/NeuroStorage.kt	DEFAULT_ONLY	-	Legacy brains, migrated for Default only.
 profile_file	sync_ledger_<collection>.json x8	main:sync/apply/SyncChangeLedgerStore.kt	DEFAULT_ONLY	-	Diffs Default's collections against what was last pushed.
 profile_file	flow_video_stats_v1.json	main:data/stats/MonthlyLedgerStore.kt	PROFILE	library	Monthly stats for recap; names live in VideoStatsRecorder and MusicStatsStorage.
 profile_file	flow_video_stats_hot_v1.json	main:data/stats/MonthlyLedgerStore.kt	PROFILE	library	Monthly stats for recap; names live in VideoStatsRecorder and MusicStatsStorage.
@@ -149,7 +149,7 @@ files_dir	profile_settings/<id>/, profile_library/<id>/	main:data/profile/Profil
 no_backup_dir	profiles/<id>/	main:data/profile/ProfileFolders.kt	PROFILE	private	Deletes a removed profile's private folder.
 profile_file	youtube_identity_<id>, music_home_cache_prefs_<id>	main:data/profile/ProfileFolders.kt	PROFILE	identity	A removed profile's SharedPreferences files, named the way ProfileFiles names them.
 cache_dir	innertube_http_cache/, recap/, playlists/	main:data/profile/AppProfileSwitchSteps.kt	CACHE	-	Deleted at a switch: search suggestions, visitor responses and share exports of the old profile.
-profile_file	pending_restore.zip	main:FlowApplication.kt	PROFILE	private	A seed or restore waiting for the running profile, applied at start before the start destination is picked.
+profile_file	pending_restore.zip	main:AelloApplication.kt	PROFILE	private	A seed or restore waiting for the running profile, applied at start before the start destination is picked.
 profile_file	pending_restore.zip	main:data/profile/ProfileSlices.kt	PROFILE	private	The seed a new profile copies from the running one, written into the new profile's private folder.
 no_backup_dir	profiles/<id>/pending_restore.zip	main:data/profile/ProfileSlices.kt	PROFILE	private	A new profile's private folder, resolved by id before that profile ever runs.
 cache_dir	held_link/	main:data/profile/SwitchIntentQueue.kt	CACHE	-	A playlist file shared during a switch, kept for the next profile to open; replaced by the next one.
