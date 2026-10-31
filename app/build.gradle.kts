@@ -50,11 +50,11 @@ fun translatedLocaleTags(): List<String> =
         .sorted()
 
 android {
-    namespace = "io.github.aedev.flow"
+    namespace = "io.github.niczzxo.aello"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "io.github.aedev.flow"
+        applicationId = "io.github.niczzxo.aello"
         minSdk = 26
         targetSdk = 36
         versionCode = 19
@@ -66,7 +66,7 @@ android {
         buildConfigField("String", "LASTFM_API_KEY", "\"${secretValue("lastfmApiKey", "lastfm.apiKey", "LASTFM_API_KEY")}\"")
         buildConfigField("String", "LASTFM_API_SECRET", "\"${secretValue("lastfmApiSecret", "lastfm.apiSecret", "LASTFM_API_SECRET")}\"")
 
-        testInstrumentationRunner = "io.github.aedev.flow.HiltTestRunner"
+        testInstrumentationRunner = "io.github.niczzxo.aello.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -243,7 +243,7 @@ androidComponents {
     onVariants(selector().withBuildType("nightly")) { variant ->
         val run = providers.environmentVariable("GITHUB_RUN_NUMBER").map(String::toInt)
         val sha = providers.environmentVariable("GITHUB_SHA").map { it.take(7) }
-        val base = providers.gradleProperty("flow.nightlyBaseVersion")
+        val base = providers.gradleProperty("aello.nightlyBaseVersion")
         variant.outputs.forEach { output ->
             val localCode = output.versionCode.get()
             val localName = output.versionName.get()

@@ -3,4 +3,4 @@
 - A song that was partly played before no longer stops with an error when it plays again
 - A local song that cannot be read while offline is skipped instead of loading for minutes
 - Songs stream in one piece instead of reconnecting after an error every 30 seconds
-- A song opened from a YouTube Music link is no longer replaced by your last queue when Flow starts
+- A song opened from a YouTube Music link is no longer replaced by your last queue when Aello starts

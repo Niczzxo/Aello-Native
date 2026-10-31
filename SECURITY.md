@@ -17,8 +17,8 @@ Always update to the newest release before reporting a security issue.
 **Do not report security vulnerabilities through public GitHub issues.**
 
 Report privately through
-[GitHub Security Advisories](https://github.com/Flow-Tube/Flow/security/advisories/new).
-If you cannot use that form, email <contact@flow-tube.org>.
+[GitHub Security Advisories](https://github.com/Niczzxo/Aello-Native/security/advisories/new).
+If you cannot use that form, email <riyazulislam.773@gmail.com>.
 
 Please include:
 
@@ -35,7 +35,7 @@ Please do not disclose the issue publicly until a fix has shipped.
 
 ## Verifying release APKs
 
-Official Flow builds are signed with a single release key. Any APK that does
+Official Aello builds are signed with a single release key. Any APK that does
 not match the fingerprint below is not an official build, regardless of where
 it was downloaded.
 
@@ -46,13 +46,13 @@ SHA-256: 43:22:29:4E:D4:CA:A2:D4:29:41:40:09:58:18:08:0F:FE:8A:CC:1F:BE:3C:DC:76
 Verify a downloaded APK with the Android SDK build tools:
 
 ```bash
-apksigner verify --print-certs flow-foss.apk
+apksigner verify --print-certs aello-foss.apk
 ```
 
 The reported `Signer #1 certificate SHA-256 digest` must equal the fingerprint
 above (lower case, without colons).
 
 Official distribution channels are the
-[GitHub Releases page](https://github.com/Flow-Tube/Flow/releases) and
-[IzzyOnDroid](https://apt.izzysoft.de/packages/io.github.aedev.flow). Builds
+[GitHub Releases page](https://github.com/Niczzxo/Aello-Native/releases) and
+[IzzyOnDroid](https://apt.izzysoft.de/packages/io.github.niczzxo.aello). Builds
 obtained anywhere else are unverified.

@@ -36,7 +36,7 @@ pipepipe
 graphify-out/
 .claude/
 claude.md
-Flow-desktop/
+Aello-desktop/
 
 # Kotlin compiler session/daemon state
 .kotlin/

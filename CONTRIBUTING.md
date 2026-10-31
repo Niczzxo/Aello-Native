@@ -1,11 +1,11 @@
-# Contributing to Flow
+# Contributing to Aello
 
-Thank you for your interest in contributing to Flow! We welcome contributions from the community.
+Thank you for your interest in contributing to Aello! We welcome contributions from the community.
 
-Flow (`io.github.aedev.flow`) is an Android music/video app written in Kotlin with Jetpack Compose,
+Aello (`io.github.niczzxo.aello`) is an Android music/video app written in Kotlin with Jetpack Compose,
 Hilt, and Media3/ExoPlayer. It plays YouTube content via a native InnerTube client with a
 NewPipe-based fallback extraction path, and supports local media playback, offline downloads,
-casting, lyrics, device-to-device sync, and an on-device recommendation engine (FlowNeuroEngine).
+casting, lyrics, device-to-device sync, and an on-device recommendation engine (AelloNeuroEngine).
 
 **Read this file before opening a pull request.** Most review round-trips on this project come from
 one of the rules below, not from the feature itself. `AGENTS.md` in the repository root carries the
@@ -14,7 +14,7 @@ AI assistant, point it at `AGENTS.md`.
 
 ## ❓ Asking Questions About the Codebase
 
-**Use [GitHub Discussions](https://github.com/Flow-Tube/Flow/discussions) — that is the right place, and
+**Use [GitHub Discussions](https://github.com/Niczzxo/Aello-Native/discussions) — that is the right place, and
 questions are welcome.** The codebase is deliberately light on comments (see "Comments" below), so
 asking is expected rather than a sign you missed something.
 
@@ -55,11 +55,11 @@ Feature suggestions are welcome! Please:
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/Flow.git
-cd Flow
+git clone https://github.com/YOUR_USERNAME/Aello.git
+cd Aello
 
 # Add upstream remote
-git remote add upstream https://github.com/Flow-Tube/Flow.git
+git remote add upstream https://github.com/Niczzxo/Aello-Native.git
 
 # Create a feature branch
 git checkout -b feature/your-feature-name
@@ -69,7 +69,7 @@ Always pull the latest `main` before starting work, to minimize merge conflicts.
 
 ### Product Flavors
 
-Flow builds two flavors: `github` (default, in-app updater enabled) and `foss` (no updater).
+Aello builds two flavors: `github` (default, in-app updater enabled) and `foss` (no updater).
 **Always use flavor-prefixed Gradle tasks** — `assembleGithubDebug`, `compileFossDebugKotlin` —
 never bare `assembleDebug` or `compileDebugKotlin`.
 
@@ -195,7 +195,7 @@ than one feature uses it, and duplicate no behaviour the library already provide
 
 ## ⚡ Performance, Battery, and Thermals — Non-Negotiable
 
-Flow is a media player that runs for hours at a time. Jank, dropped frames, playback stutter, device
+Aello is a media player that runs for hours at a time. Jank, dropped frames, playback stutter, device
 heat, and battery drain are **critical bugs, not cosmetic issues**. Every rule below is anchored in a
 real shipped regression that had to be found and fixed on-device.
 
@@ -231,7 +231,7 @@ real shipped regression that had to be found and fixed on-device.
    widen these, never add a new high-frequency position `StateFlow`, and never collect the precise
    tick from a surface that renders whole seconds. New sub-second consumers must use the same
    refcounted acquire/release pattern with a `DisposableEffect`.
-6. **Event-driven over polling.** Prefer player callbacks, Flow emissions, and `snapshotFlow`/
+6. **Event-driven over polling.** Prefer player callbacks, Aello emissions, and `snapshotFlow`/
    `collect` chains to timer loops. Any unavoidable polling loop must suspend while paused, never
    busy-wait, and its interval must be justified against what actually changes at that rate.
 7. **Battery/background behaviour is part of every change.** Dynamic `wakeMode` (LOCAL foreground /
@@ -252,7 +252,7 @@ real shipped regression that had to be found and fixed on-device.
 10. **The shared pools are finite.** `PerformanceDispatcher.networkIO` is a fixed 4–16 thread pool.
     Launch parallel work as one bounded round (`map { async { … } }.awaitAll()`), never as an
     unbounded per-item fan-out, and never queue a second copy of a pipeline already in flight.
-11. **Flow lifecycle.** `stateIn(WhileSubscribed(5_000))` on UI-facing flows is load-bearing —
+11. **Aello lifecycle.** `stateIn(WhileSubscribed(5_000))` on UI-facing flows is load-bearing —
     subscription count gates work to actual UI visibility. Never switch to `Eagerly`/`Lazily` for
     convenience, and never add hot collectors that outlive their surface.
 12. **Caches must be honored and invalidated.** Check for an existing cache (music home cache,
@@ -264,7 +264,7 @@ real shipped regression that had to be found and fixed on-device.
 13. Sustained heat while the app is open = per-frame work; drain with the screen off = CPU/network
     loops. Diagnose in that order: (a) run the rule-2 audit over every composed-but-hidden tree;
     (b) count fetches per user action in logcat — any unexplained second fetch is the bug;
-    (c) check `adb shell dumpsys gfxinfo io.github.aedev.flow` for continuous frame production while
+    (c) check `adb shell dumpsys gfxinfo io.github.niczzxo.aello` for continuous frame production while
     the UI should be idle; (d) only then suspect the player path. Do not "fix" heat by degrading
     visible design, motion, or update smoothness — find the invisible work instead.
 
@@ -355,7 +355,7 @@ Split by **responsibility**, never by line count:
 
 ### Naming conventions (already in force — match them)
 
-- `shared/` primitives with no domain meaning take the **`Flow`** prefix: `FlowFilterChip`,
+- `shared/` primitives with no domain meaning take the **`Aello`** prefix: `FlowFilterChip`,
   `FlowSearchField`, `FlowEmptyState`, `FlowLoadingIndicator`.
 - `shared/` components in the media vocabulary take the **`Media`** prefix: `MediaRow`,
   `MediaThumbnail`, `MediaBadges`, `MediaKindSelector`.
@@ -407,7 +407,7 @@ empty/error states, badges, formatters, or a second copy of a `shared/` componen
 
 ### Dependency injection
 
-Flow uses Hilt, but some legacy app-owned classes are still reached through static `getInstance()`
+Aello uses Hilt, but some legacy app-owned classes are still reached through static `getInstance()`
 calls. Treat those as migration debt, not as a pattern to copy.
 
 1. **Use constructor injection by default** for new ViewModels, repositories, use cases, workers,
@@ -564,8 +564,8 @@ bump takes three times as long to review and is three times as likely to be reve
 
 ## 🔐 Release and Signing Invariants
 
-Flow is distributed through GitHub Releases and
-[IzzyOnDroid](https://apt.izzysoft.de/packages/io.github.aedev.flow). Both pin properties of the
+Aello is distributed through GitHub Releases and
+[IzzyOnDroid](https://apt.izzysoft.de/packages/io.github.niczzxo.aello). Both pin properties of the
 published artifacts, so the following are hard constraints. Breaking one of them cannot be fixed by a
 follow-up release — it forces every installed user to uninstall and reinstall, losing their local
 data.
@@ -610,14 +610,14 @@ a `v*` tag build when the keystore secret is missing rather than publishing them
 
 ## ❓ Questions?
 
-- Open a [discussion](https://github.com/Flow-Tube/Flow/discussions) — including questions about how the
+- Open a [discussion](https://github.com/Niczzxo/Aello-Native/discussions) — including questions about how the
   codebase works
 - Comment on existing issues
 - Reach out to maintainers
 
 ## 🙏 Thank You!
 
-Every contribution helps make Flow better. Thank you for being part of the community!
+Every contribution helps make Aello better. Thank you for being part of the community!
 
 ---
 
