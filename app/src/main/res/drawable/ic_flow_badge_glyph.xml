@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- The "F" glyph of the Flow badge (same tight-crop viewport as
+<!-- The "F" glyph of the Aello badge (same tight-crop viewport as
      ic_flow_badge_shape) so the two layers can be tinted independently. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="48dp"

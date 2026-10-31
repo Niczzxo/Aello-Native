@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Flow play-badge outline (tight crop), single path so it can be tinted to
+<!-- Aello play-badge outline (tight crop), single path so it can be tinted to
      the active theme at runtime. Pair with ic_flow_badge_glyph for the "F". -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="48dp"
