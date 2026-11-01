@@ -571,7 +571,7 @@ follow-up release — it forces every installed user to uninstall and reinstall,
 data.
 
 **The signing key never changes.** Every release APK must be signed with the official key,
-certificate SHA-256 `4322294ed4caa2d4294140095818080ffe8acc1fbe3cdc76107df45c5286be40`. Android
+certificate SHA-256 `22c73177fcd334037d5b941bdeeba3d25a0bf33bb86d16574bd02701778df2bb`. Android
 refuses to install an update signed by a different key. CI enforces this in the
 `Verify release signing certificate` step, which fails the build on a mismatch. Never regenerate
 `release.keystore`, and never rotate the `RELEASE_KEYSTORE_BASE64`, `STORE_PASSWORD`, `KEY_ALIAS`, or
