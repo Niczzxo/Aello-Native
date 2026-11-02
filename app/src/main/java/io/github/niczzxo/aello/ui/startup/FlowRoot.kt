@@ -97,6 +97,8 @@ internal fun FlowRoot(
     // Initialize Aello Neuro Engine
     LaunchedEffect(Unit) {
         AelloNeuroEngine.initialize(applicationContext)
+        // A duplicate or missing launcher icon survives an update, so normalize it on every start.
+        appIconController.repair()
     }
 
     FlowTheme(theme) {

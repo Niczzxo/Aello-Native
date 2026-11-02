@@ -26,6 +26,7 @@ import okhttp3.Request
 import java.io.File
 import java.io.IOException
 import java.security.MessageDigest
+import java.util.concurrent.TimeUnit
 
 private const val PROGRESS_NOTIFICATION_ID = 9998
 private const val READY_NOTIFICATION_ID = 9999
@@ -33,6 +34,10 @@ private const val BUFFER_SIZE = 64 * 1024
 private const val PROGRESS_STEP = 0.01f
 private const val PROGRESS_INTERVAL_MS = 250L
 private const val PERCENT = 100
+
+/** A 30 MB APK on slow mobile data takes a while: no total timeout, long gaps allowed between reads. */
+private const val DOWNLOAD_CONNECT_TIMEOUT_S = 30L
+private const val DOWNLOAD_READ_TIMEOUT_S = 300L
 
 /**
  * Downloads one release APK in the foreground, hashing it as it arrives. The file is kept only if
@@ -66,7 +71,15 @@ class UpdateDownloadWorker(
                 notifyReady()
                 Result.success()
             } catch (e: IOException) {
-                fail(if (e.message?.contains("ENOSPC") == true) UpdateFailure.STORAGE else UpdateFailure.NETWORK, part)
+                if (e.message?.contains("ENOSPC") == true) {
+                    fail(UpdateFailure.STORAGE, part)
+                } else if (e.message?.startsWith("HTTP ") == true) {
+                    fail(UpdateFailure.NETWORK, part)
+                } else {
+                    // A dropped connection retries with WorkManager backoff; a bad URL does not.
+                    part.delete()
+                    Result.retry()
+                }
             }
         }
 
@@ -80,6 +93,9 @@ class UpdateDownloadWorker(
                 .okHttpClient()
                 .newBuilder()
                 .cache(null)
+                .connectTimeout(DOWNLOAD_CONNECT_TIMEOUT_S, TimeUnit.SECONDS)
+                .readTimeout(DOWNLOAD_READ_TIMEOUT_S, TimeUnit.SECONDS)
+                .callTimeout(0, TimeUnit.MILLISECONDS)
                 .build()
         val digest = MessageDigest.getInstance("SHA-256")
         client.newCall(Request.Builder().url(url).build()).execute().use { response ->

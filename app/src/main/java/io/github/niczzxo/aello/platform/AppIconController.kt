@@ -71,14 +71,15 @@ class AppIconController
         }
 
         /**
-         * Gives the app its default launcher entry back when no known alias is enabled, which happens
-         * when an update drops the alias a user had picked: the default stays explicitly disabled.
+         * Leaves the app with exactly one launcher entry: the default icon. More than one entry can
+         * appear when an icon switch is interrupted, and none can appear when an update drops the
+         * alias a user had picked, so anything but exactly one is reset to the default.
          */
         suspend fun repair() {
-            val hasLauncherEntry =
+            val enabledCount =
                 withContext(Dispatchers.IO) {
                     val packageManager = context.packageManager
-                    AppIcons.ALL_SUFFIXES.any { suffix ->
+                    AppIcons.ALL_SUFFIXES.count { suffix ->
                         when (packageManager.getComponentEnabledSetting(componentFor(suffix))) {
                             PackageManager.COMPONENT_ENABLED_STATE_ENABLED -> true
                             PackageManager.COMPONENT_ENABLED_STATE_DEFAULT -> suffix == AppIcons.DEFAULT_SUFFIX
@@ -86,7 +87,7 @@ class AppIconController
                         }
                     }
                 }
-            if (!hasLauncherEntry) apply(AppIcons.DEFAULT_SUFFIX)
+            if (enabledCount != 1) apply(AppIcons.DEFAULT_SUFFIX)
         }
 
         private fun componentFor(suffix: String) = ComponentName(context.packageName, AppIcons.NAMESPACE + suffix)
