@@ -1,4 +1,4 @@
-# Aello v3.0.3
+# Aello v3.0.4
 
 **Release date:** 2026-11-03
 **Status:** Stable
