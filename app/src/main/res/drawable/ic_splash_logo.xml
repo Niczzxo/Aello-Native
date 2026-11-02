@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Splash icon: the Aello logo. -->
-<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/ic_aello_logo"
-    android:gravity="center" />
+<!-- The logo art is full bleed; the splash zooms its icon on exit, so the logo is masked to the inner two thirds to stay whole. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_aello_logo"
+    android:inset="28%" />
