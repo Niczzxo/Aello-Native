@@ -299,7 +299,6 @@ fun NavGraphBuilder.flowAppGraph(
         SettingsHost(
             start = SettingsTarget.decode(backStackEntry.arguments?.getString("target")),
             onExit = { navController.popBackStack() },
-            onOpenDonations = { navController.navigate("donations") },
             onOpenRecap = { navController.navigate(RecapRoutes.stats()) },
             onOpenUpdate = { navController.navigate(UPDATE_ROUTE) },
         )
@@ -347,13 +346,6 @@ fun NavGraphBuilder.flowAppGraph(
                 onClose = { navController.popBackStack() },
             )
         }
-    }
-
-    composable("donations") {
-        currentRoute.value = "donations"
-        io.github.niczzxo.aello.ui.screens.settings.about.DonationsScreen(
-            onNavigateBack = { navController.popBackStack() },
-        )
     }
 
     composable(

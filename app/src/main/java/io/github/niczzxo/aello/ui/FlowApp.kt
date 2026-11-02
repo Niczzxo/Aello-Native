@@ -34,7 +34,6 @@ import io.github.niczzxo.aello.player.EnhancedMusicPlayerManager
 import io.github.niczzxo.aello.player.EnhancedPlayerManager
 import io.github.niczzxo.aello.player.GlobalPlayerState
 import io.github.niczzxo.aello.player.SleepTimerManager
-import io.github.niczzxo.aello.ui.components.donation.DonationPromptHost
 import io.github.niczzxo.aello.ui.components.equalizer.LocalEqualizerState
 import io.github.niczzxo.aello.ui.components.layout.FlowBottomInsets
 import io.github.niczzxo.aello.ui.components.layout.LocalFlowBottomInsets
@@ -609,9 +608,5 @@ fun FlowApp(
 
         UpdateLaunchEffect(needsOnboarding = needsOnboarding, onOpenUpdate = { navController.navigate(UPDATE_ROUTE) })
 
-        DonationPromptHost(
-            enabled = needsOnboarding == false && !isInPipMode && !playerVisible,
-            onNavigateToDonations = { navController.navigate("donations") },
-        )
     }
 }

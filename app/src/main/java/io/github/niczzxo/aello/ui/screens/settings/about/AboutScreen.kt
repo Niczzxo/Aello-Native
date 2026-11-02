@@ -53,7 +53,6 @@ private enum class AboutDialog { CHANGELOG, DEVICE, NOTICES }
 
 private const val WEBSITE_URL = "https://riyazulislam.dev"
 private const val GITHUB_URL = "https://github.com/Niczzxo/Aello-Native"
-private const val REDDIT_URL = "https://www.reddit.com/r/Flow_Official/"
 private const val CREATOR_URL = "https://github.com/Niczzxo"
 private const val NEWPIPE_URL = "https://github.com/TeamNewPipe/NewPipeExtractor"
 private const val LICENSE_URL = "https://github.com/Niczzxo/Aello-Native/blob/main/License"
@@ -95,7 +94,6 @@ internal fun AboutScreen(
         group(key = "about.contact", header = R.string.section_contact) {
             nav(AboutIndex.website, icon = Icons.Outlined.Public, showChevron = false, onClick = { open(WEBSITE_URL) })
             nav(AboutIndex.github, iconRes = R.drawable.ic_github, showChevron = false, onClick = { open(GITHUB_URL) })
-            nav(AboutIndex.reddit, icon = IconReddit, showChevron = false, onClick = { open(REDDIT_URL) })
         }
         group(key = "about.legal", header = R.string.section_legal) {
             nav(AboutIndex.license, icon = Icons.Outlined.Description, showChevron = false, onClick = { open(LICENSE_URL) })

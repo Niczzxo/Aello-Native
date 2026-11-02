@@ -62,5 +62,4 @@ internal object HomeRowIcons {
     val DeepFlowScrobble: ImageVector = Icons.Outlined.CloudUpload
     val DeepFlowOnSearch: ImageVector = Icons.AutoMirrored.Outlined.ManageSearch
     val Updates: ImageVector = Icons.Outlined.Update
-    val Support: ImageVector = Icons.Outlined.VolunteerActivism
 }

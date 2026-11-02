@@ -50,7 +50,6 @@ private val SearchFieldBottomPadding = 8.dp
 internal fun SettingsHomeScreen(
     selected: SettingsDestination?,
     onOpen: (SettingsTarget) -> Unit,
-    onOpenDonations: () -> Unit,
     onOpenUpdate: () -> Unit,
     onBack: () -> Unit,
     selectedRowFocus: FocusRequester? = null,
@@ -84,7 +83,6 @@ internal fun SettingsHomeScreen(
         query = ""
         val page = DestinationIndex.destinationOf(entry)
         when {
-            entry.key == HomeIndex.support.key -> onOpenDonations()
             entry.key == HomeIndex.checkForUpdates.key -> viewModel.checkForUpdates()
             page != null -> onOpen(SettingsTarget(page))
             entry.destination == SettingsDestination.HOME -> highlight = entry.key
@@ -126,7 +124,6 @@ internal fun SettingsHomeScreen(
                 actions =
                     SettingsHomeActions(
                         onOpen = onOpen,
-                        onOpenDonations = onOpenDonations,
                         onDeepFlowChange = viewModel::setDeepFlowEnabled,
                         onDurationClick = { showDurationDialog = true },
                         onSaveHistoryChange = viewModel::setDeepFlowSaveToHistory,

@@ -41,8 +41,6 @@ object TvRoutes {
 
     const val MOODS = "moodsAndGenres"
 
-    const val DONATIONS = "donations"
-
     /** [channelRef] is a full channel URL (preferred) or a bare channel id. */
     fun channel(channelRef: String): String = "channel?ref=${Uri.encode(channelRef)}"
 
