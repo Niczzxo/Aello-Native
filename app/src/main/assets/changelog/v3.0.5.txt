@@ -1,0 +1,8 @@
+AELLO CHANGE LOG
+VERSION: 3.0.5
+DATE: 2026-11-03
+STATUS: stable
+
+FIXES
+- In-app updates now pick the right APK for your device and survive slow connections, with retries on the update check and the download
+- The home screen now keeps a single Aello icon with the full logo
