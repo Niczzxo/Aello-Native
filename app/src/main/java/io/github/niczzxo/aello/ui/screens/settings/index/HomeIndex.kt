@@ -65,6 +65,7 @@ internal object HomeIndex {
             destination = home,
             availability = SettingAvailability.GithubOnly,
         )
+
     /** The persona card is found through Your taste's own destination entry, not listed twice. */
     val all = listOf(deepFlow, deepFlowDuration, deepFlowHistory, deepFlowScrobble, deepFlowOnSearch, checkForUpdates)
 }
