@@ -1,6 +1,6 @@
-# Aello v3.0.1
+# Aello v3.0.2
 
-**Release date:** 2026-11-02
+**Release date:** 2026-11-03
 **Status:** Stable
 
 Enjoying Aello? Star the project on GitHub to help keep the app free, open source, ad-free, and improving!
