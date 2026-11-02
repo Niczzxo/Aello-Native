@@ -8,7 +8,6 @@
   <p>
     <a href="https://github.com/Niczzxo/Aello-Native/releases"><b>Download APK</b></a> ·
     <a href="https://github.com/Niczzxo/Aello-Native/wiki"><b>Documentation</b></a> ·
-    <a href="#support--donations"><b>Donate</b></a> ·
     <a href="#translate"><b>Translations</b></a>
   </p>
 </div>
@@ -152,14 +151,7 @@ Aello Nightly is built from every commit to `main`. It installs next to the stab
 To ensure the authenticity of the APK and verify it has not been tampered with, you can check the signing certificate fingerprint using tools like [AppVerifier](https://github.com/soupslurpr/AppVerifier).
 
 **Release Certificate SHA-256 Fingerprint:**
-`43:22:29:4E:D4:CA:A2:D4:29:41:40:09:58:18:08:0F:FE:8A:CC:1F:BE:3C:DC:76:10:7D:F4:5C:52:86:BE:40`
-
----
-
-<a id="support--donations"></a>
-## 💰 Support Development
-
-Aello is a free and open-source project. If you like it, please star the repository on GitHub and share it with others — that is the best way to support its development.
+`22:C7:31:77:FC:D3:34:03:7D:5B:94:1B:DE:EB:A3:D2:5A:0B:F3:3B:B8:6D:16:57:4B:D0:27:01:77:8D:F2:BB`
 
 ---
 
@@ -193,7 +185,7 @@ Help translate Aello into your language! Translations live in `app/src/main/res/
 **Aello** is Free Software: You can use, study, share, and improve it at your will.
 It is distributed under the **GNU General Public License v3 (GPLv3)**.
 
-**Copyright © 2025-2026 A-EDev**
+**Copyright © 2025-2026 Niczzxo**
 
 > 🚨 **For Developers:**
 > This license requires that any project using Aello's source code (including the `AelloNeuroEngine` algorithm) must also be **Open Source** under the GPLv3 license. You may not use this code in a proprietary or closed-source application.
@@ -204,15 +196,15 @@ It is distributed under the **GNU General Public License v3 (GPLv3)**.
 
 <a href="https://github.com/Niczzxo/Aello-Native/stargazers">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.riyazulislam.dev/v1/stars/stars-flow-android-dark.svg">
-    <img alt="Star history of Aello for Android" src="https://assets.riyazulislam.dev/v1/stars/stars-flow-android-light.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://assets.flow-tube.org/v1/stars/stars-flow-android-dark.svg">
+    <img alt="Star history of Aello for Android" src="https://assets.flow-tube.org/v1/stars/stars-flow-android-light.svg" width="100%">
   </picture>
 </a>
 
 ---
 
 <div align="center">
-  <a href="https://github.com/Niczzxo"><picture><source media="(prefers-color-scheme: dark)" srcset="https://assets.riyazulislam.dev/v1/badges/pill/part-of-flow-dark.svg"><img alt="Part of the Aello ecosystem" src="https://assets.riyazulislam.dev/v1/badges/pill/part-of-flow-light.svg" height="60"></picture></a>
+  <a href="https://github.com/Niczzxo"><picture><source media="(prefers-color-scheme: dark)" srcset="https://assets.flow-tube.org/v1/badges/pill/part-of-flow-dark.svg"><img alt="Part of the Aello ecosystem" src="https://assets.flow-tube.org/v1/badges/pill/part-of-flow-light.svg" height="60"></picture></a>
   <br><br>
   <sub>Made with ❤️ by Niczzxo</sub>
 </div>
