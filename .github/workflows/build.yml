@@ -25,7 +25,7 @@ env:
   EXPECTED_SIGNER_SHA256: 22c73177fcd334037d5b941bdeeba3d25a0bf33bb86d16574bd02701778df2bb
   # Certificate of the nightly key. Every nightly must carry it so each one
   # installs over the previous nightly without an uninstall.
-  EXPECTED_NIGHTLY_SIGNER_SHA256: e42225b5ab3ac68236e54567ef0c4878afbafcdd3d438fbaba343e2d70425bf0
+  EXPECTED_NIGHTLY_SIGNER_SHA256: dc997ec3e7e8dab31f51b80c908389b69919b633bc6086bb29cc6ea6396e9ef9
 
 # checks, tests, lint and build run on separate runners at the same time, and
 # both publish jobs wait for all four. The CI Gradle properties replace the
