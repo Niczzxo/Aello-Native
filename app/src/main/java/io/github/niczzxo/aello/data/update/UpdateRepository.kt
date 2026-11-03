@@ -110,7 +110,8 @@ class UpdateRepository
             val body =
                 withContext(Dispatchers.IO) {
                     val checkClient =
-                        client.newBuilder()
+                        client
+                            .newBuilder()
                             .connectTimeout(CHECK_CONNECT_TIMEOUT_S, TimeUnit.SECONDS)
                             .readTimeout(CHECK_READ_TIMEOUT_S, TimeUnit.SECONDS)
                             .callTimeout(CHECK_CALL_TIMEOUT_S, TimeUnit.SECONDS)
